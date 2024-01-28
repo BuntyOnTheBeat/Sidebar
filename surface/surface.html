@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" 
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fj
+    qhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+    <link rel="stylesheet" href="/surface/summitiveCss.css">
+    <link rel="stylesheet" href="/utilities.css">
+ 
+    <title>Document</title>
+
+    <link rel="icon" type="image/x-icon" href="/picture/close.png">
+
+</head>
+<body>
+    
+    <!---TOP DOWN Design-->
+
+    <div class="main">
+
+        <div class="circle"></div>
+
+        <div class="nav"> <!---Creating the navigation bar-->
+
+            <a href="#"><img src="/picture/logo.png" class="logo"></a>
+
+            <div class="toggle" onclick="toggleMenu();"></div>
+
+            <ul class="menu">
+
+                <a href="#"><li>Home </a></li>
+                <a href="#"><li>Philosophy</a></li>
+                <a href="#"><li>Procucts</a></li>
+                <a href="#"><li>Contacts</a></li>
+
+            </ul>
+
+        </div>
+
+<script>
+
+    jQuery(function($){
+    
+        var $nav = $(".nav");
+        $(window).scroll(function(event){
+
+            var $current = $(this).scrollTop();
+            if($current > 0){
+                
+                $nav.addClass("nav-color");
+
+            }
+            else{
+
+                $nav.removeClass("nav-color");
+
+            }
+
+        })
+
+    })
+
+</script>
+
+        <!---Creating content element-->
+
+        <div class="content">
+
+            <div class="textBox">
+
+                <h2> It's not just Santosh <br> It's <span> Santosh Nukala </span> </h2> 
+
+                <br>
+
+                <p>
+                    
+                    My dad graduated at a top University in Germany.<br>
+                    My mom studied Computer Science while in school.<br>
+                    My brother is my brother.<br>
+
+                    <br>
+
+                    <span>What about me?</span><br>
+                    I am Santosh Nukala. I have lived in China for 6 years, since 2017.<br>
+                    I have allways went to DAIS but I have lived in diffrent houses.<br>
+                    I was born in Luxembourg, but my parents and the rest of my extended family; are Indian.<br>
+
+                </p>
+                
+                <br>
+
+                <a href="https://www.youtube.com/channel/UCy6Oz4XHg780JH0tcIEEqOA" target="_blank">Learn More!</a>
+
+            </div>
+
+            <div class="imgBox">
+
+                <img src="/picture/book.png" class="book">
+    
+            </div>
+
+        </div>
+
+        <ul class="thumb">
+
+            <li><img src="/picture/book1.png" onclick="imgChanger('picture/book.png'); changeCircleColor('grey');" ></li>
+
+            <li><img src="/picture/laptop.png" onclick="imgChanger('picture/laptop.png'); changeCircleColor('darkblue');" ></li>
+
+            <li><img src="/picture/pro1.png" onclick="imgChanger('picture/pro.png'); changeCircleColor('darkviolet');" ></li>
+
+            <li><img src="/picture/studio1.png" onclick="imgChanger('picture/studio.png'); changeCircleColor('black');" ></li>
+
+        </ul>
+
+        <ul class="social">
+
+            <li> <a href="https://www.youtube.com/channel/UCy6Oz4XHg780JH0tcIEEqOA" target="_blank"> <img src="/picture/facebook.png"> </a> </li>
+            <li> <a href="#" target="_blank"> <img src="/picture/close.png"> </a> </li>
+            <li> <a href="https://www.instagram.com/waylord559/?next=%2F" target="_blank"> <img src="/picture/instragram.png"> </a> </li>
+            <li> <a href="#" target="_blank"> <img src="/picture/linkedin.png"> </a> </li>
+
+        </ul>
+
+    </div>
+
+<script type="text/javascript">
+
+    function imgChanger(next){
+
+        document.querySelector('.book').src = next;
+    
+    }
+    function changeCircleColor(color){
+
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+
+    }
+
+    function toggleMenu(){
+
+        const menuToggle = document.querySelector('.toggle');
+        const menu = document.querySelector('.menu');
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+
+    }
+
+</script>
+
+<!---Footer-->
+
+<footer class="footer bg-dark py-3">
+
+    <div class="grid grid-3">
+
+        <div id="surface">
+
+            <h1>Surface</h1>
+
+            <p>Copyright &copy; 2023. Dr. Santosh Nukala</p>
+
+        </div>
+
+        <nav>
+
+            <a href="#"><li>Home </a></li>
+            <a href="#"><li>Philosophy</a></li>
+            <a href="#"><li>Procucts</a></li>
+            <a href="#"><li>Contacts</a></li>
+
+        </nav>
+
+        <div id="social">
+
+            <li> <a href="#"> <img src="/picture/facebook.png"> </a> </li>
+            <li> <a href="#"> <img src="/picture/close.png"> </a> </li>
+            <li> <a href="#"> <img src="/picture/instragram.png"> </a> </li>
+            <li> <a href="#"> <img src="/picture/linkedin.png"> </a> </li>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

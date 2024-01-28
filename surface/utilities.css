@@ -1,0 +1,127 @@
+/*GRID*/
+
+.grid{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*two rows with one frame*/
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+}
+
+.grid-3{
+    
+    grid-template-columns: repeat(3, 1fr); /*three rows with one frame*/
+
+}
+
+.grid-4{
+
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(1, 2f);
+
+}
+
+/*Margin*/
+
+.my-1{
+
+    margin: 1rem 0;
+
+}
+
+.my-2{
+
+    margin: 2rem 0;
+
+}
+
+.my-3{
+
+    margin: 3rem 0;
+
+}
+
+.mx-1{
+
+    margin: 0 1rem;
+
+}
+
+.mx-2{
+
+    margin: 0 2rem;
+
+}
+
+.mx-3{
+
+    margin: 0 3rem;
+
+}
+
+/*Padding*/
+
+.py-1{
+
+padding: 1rem 0;
+
+}
+
+.py-2{
+
+    padding: 2rem 0;
+
+}
+
+.py-3{
+
+    padding: 3rem 0;
+
+}
+
+.px-1{
+
+    padding: 0 1rem;
+
+}
+
+.px-2{
+
+    padding: 0 2rem;
+
+}
+
+.px-3{
+
+    padding: 0 3rem;
+
+}
+
+/*Background*/
+
+.bg-primary{
+
+    background-color: blue;
+
+}
+
+.bg-secondry{
+
+    background-color: brown;
+
+}
+
+.bg-dark{
+
+    background-color: purple;
+
+}
+
+.bg-light{
+
+    background-color: beige;
+
+}
